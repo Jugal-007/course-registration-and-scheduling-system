@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRSS - Student Portal Login</title>
+  <style>
+    :root {
+      --primary-color: #1a56db;
+      --primary-hover: #1e429f;
+      --bg-color: #f3f4f6;
+      --card-bg: #ffffff;
+      --text-color: #1f2937;
+      --border-color: #d1d5db;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .login-container {
+      background: var(--card-bg);
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      width: 100%;
+      max-width: 420px;
+    }
+    h2 {
+      margin-top: 0;
+      color: #111827;
+      text-align: center;
+    }
+    p.subtitle {
+      text-align: center;
+      color: #6b7280;
+      margin-top: -0.5rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 0.95rem;
+      transition: border-color 0.2s;
+    }
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.15);
+    }
+    .btn-submit {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: var(--primary-color);
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .btn-submit:hover {
+      background-color: var(--primary-hover);
+    }
+    .footer-links {
+      margin-top: 1.25rem;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+    .footer-links a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Course Registration &amp; Scheduling</h2>
+    <p class="subtitle">Student Portal Authentication (FR-01)</p>
+    <form id="loginForm" action="/api/auth/student-login" method="POST">
+      <div class="form-group">
+        <label for="studentId">Student ID / PRN</label>
+        <input type="text" id="studentId" name="studentId" placeholder="e.g. 24C21000" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter portal password" required>
+      </div>
+      <button type="submit" class="btn-submit">Sign In to Portal</button>
+      <div class="footer-links">
+        <a href="#forgot-password">Forgot Credentials?</a> &bull; <a href="#support">IT Helpdesk</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
