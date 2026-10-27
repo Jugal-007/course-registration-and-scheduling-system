@@ -58,3 +58,7 @@ course-registration-and-scheduling-system/
 - **Institution**: ITM SLS Baroda University
 - **Department**: Computer Science & Engineering
 - **Course**: Software Engineering & Agile Methodology Lab (Practical 6)
+
+
+## ?? Authentication Module (FR-01)
+The student login portal (login.html) provides role-based credential entry for students and instructors.
